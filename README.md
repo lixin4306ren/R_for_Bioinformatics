@@ -1,3 +1,3 @@
-# R_for_Bioinformatics
+# 目录
 
-[颜色](color.md)
+* [颜色](color.md)
