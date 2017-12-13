@@ -1,7 +1,6 @@
 ## 使用`rio`package进行文件读写，转换
 ```
-library("rio")                                                ##根据后缀自动识别一系列文件格式
-install_formats()                                             ##支持的文件类型
+library("rio")                                                ##根据后缀自动识别一系列文件格式，支持的文件类型见[链接](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
 x <- import("mtcars.csv")
 export(mtcars, "mtcars.rds")
 export(mtcars, "mtcars.dta")
