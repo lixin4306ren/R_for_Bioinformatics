@@ -1,6 +1,12 @@
+## 使用`biomartr`下载数据
+`getMarts()`  获取可用mart数据库
+`getReleases(db = "ensembl")`  获取可用的版本，包含archive  
+
+
 
 ## biomaRt
 `listMarts()`  列出可用的数据库，基因信息为`ENSEMBL_MART_ENSEMBL`  
+`listEnsemblArchives()`  列出所有archive版本  
 `useMart()`  使用具体的数据库  
 ```
 mart<-useMart("ENSEMBL_MART_ENSEMBL",dataset="ggallus_gene_ensembl",host="Jul2016.archive.ensembl.org")
