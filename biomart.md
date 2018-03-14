@@ -1,5 +1,5 @@
 ## `biomartr`
-`biomartr`是`biomaRt`的拓展版。
+`biomartr`是`biomaRt`的拓展版，有很多相似的函数，`biomartr`的特点是基于物种为中心。   
 `getMarts()`  获取可用mart数据库
 `getReleases(db = "ensembl")`  获取可用的版本，包含archive  
 
