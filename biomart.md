@@ -2,6 +2,12 @@
 `biomartr`是`biomaRt`的拓展版，有很多相似的函数，`biomartr`的特点是基于物种为中心。   
 `getMarts()`  获取可用mart数据库
 `getReleases(db = "ensembl")`  获取可用的版本，包含archive  
+`getDatasets(mart = "ENSEMBL_MART_ENSEMBL")`  获取某个mart里所有的datasets  
+`getAttributes(mart = "ENSEMBL_MART_ENSEMBL", dataset = "mmulatta_gene_ensembl")`  列出某dataset所有可用的Attributes  
+`getFilters()`  列出基因可用的和可供filter的信息  
+`organismBM(organism = "Macaca mulatta")`  列出某物种所有数据库
+
+
 
 
 
