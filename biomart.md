@@ -1,3 +1,15 @@
+## `SRAdb`
+R中下载SRA数据  
+
+```
+library(SRAdb)
+#sqlfile <- getSRAdbFile()
+sqlfile <- 'SRAmetadb.sqlite'
+sra_con <- dbConnect(SQLite(),sqlfile)
+rs = listSRAfile( c("SRX275878"), sra_con, fileType = 'sra' )
+getSRAfile(rs$run, sra_con, fileType = 'sra' )
+```
+
 ## `biomartr`
 `biomartr`是`biomaRt`的拓展版，有很多相似的函数，`biomartr`的特点是基于物种为中心。   
 `getMarts()`  获取可用mart数据库
