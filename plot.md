@@ -7,3 +7,4 @@ qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2)              ##多个pa
 qplot(displ, hwy, data = mpg, facets = . ~ drv) + geom_smooth()
 qplot(log(eno), data = maacs, geom = "density", color = mopos)
 ```
+# 使用ggpubr，grid，cowplot，gridExtra排列组合图片成publish-ready figures
