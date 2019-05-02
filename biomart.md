@@ -1,7 +1,7 @@
 ## `GEOquery`
 下载GEO的数据
 ```
-gse <- getGEO("GSE38685")
+gse <- getGEO("GSE38685",GSEMatrix=F)
 
 ```
 
