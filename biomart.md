@@ -19,10 +19,6 @@ getSRAfile(rs$run, sra_con, fileType = 'sra' )
 `getFilters()`  列出基因可用的和可供filter的信息  
 `organismBM(organism = "Macaca mulatta")`  列出某物种所有数据库
 
-
-
-
-
 ## `biomaRt`
 `listMarts()`  列出可用的数据库，基因信息为`ENSEMBL_MART_ENSEMBL`  
 `listEnsemblArchives()`  列出所有archive版本  
@@ -46,3 +42,19 @@ listAttributes(mart, page="feature_page")
 geneinfo=getBM(filters="ensembl_gene_id",attributes=c('ensembl_gene_id','external_gene_name','description'),values=gene_id,mart=mart)
 ```
 
+## `AnnotationHub`
+整合NCBI，UCSC，Ensembl数据库的信息，好处是可以直接得到GRange格式的对象
+```
+ah <- AnnotationHub()
+query(ah,c("Homo sapiens"))->hs
+mcols(hs) -> hs.info
+
+cpgi_query <- query(hs, c("CpG Islands", "UCSC", "hg19"))
+### refseq
+gene_query <- query(hs, c("hg19","refseq"))
+d <- display(gene_query)
+hs[['AH5040']]->refseq
+### CGI
+cpgi_query <- query(ah, c("CpG Islands", "UCSC", "hg19"))
+cpgi <- ah[[names(cpgi_query)]]
+```
