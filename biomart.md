@@ -63,6 +63,15 @@ cpgi <- ah[[names(cpgi_query)]]
 基因信息，已经不同数据库之间的信息（如ID）转化，`Homo.sapiens`是`org.Hs.eg.db`和`TxDb.Hsapiens.UCSC.hg19.knownGene`的整合。
 
 ```
-keytypes(org.Hs.eg.db)    ##查看所含信息
-transcripts(org.Hs.eg.db, columns=c("TXNAME","SYMBOL"))
+Homo.sapiens
+cls <- columns(Homo.sapiens)
+cls
+cls <- cls[c(1,19,45)]
+kts <- keytypes(Homo.sapiens)
+kt <- kts[2]
+kts
+ks <- head(keys(Homo.sapiens, keytype=kts[2]))
+ks
+res <- select(Homo.sapiens, keys=ks, columns=cls, keytype=kt)
+head(res)
 ```
