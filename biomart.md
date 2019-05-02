@@ -75,3 +75,8 @@ ks
 res <- select(Homo.sapiens, keys=ks, columns=cls, keytype=kt)
 head(res)
 ```
+
+## `Organism.dplyr`
+
+与tidyverse兼容的annotation package。
+
