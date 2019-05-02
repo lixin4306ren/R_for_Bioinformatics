@@ -1,3 +1,10 @@
+## `GEOquery`
+下载GEO的数据
+```
+gse <- getGEO("GSE38685")
+
+```
+
 ## `SRAdb`
 R中下载SRA数据  
 
