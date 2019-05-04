@@ -17,3 +17,9 @@ ggarrange(bxp, dp, bp + rremove("x.text"),   ##排列panel
 annotate_figure()               ##上下左右添加注释
 ggarrange(bxp, dp, labels = c("A", "B"),common.legend = TRUE, legend = "bottom")  ##use common legend
 ```
+
+# `ComplexHeatmap`包  
+非常有用，heatmap作图只学此一个包就够了，https://jokergoo.github.io/ComplexHeatmap-reference/book/  
+
+# `EnrichedHeatmap`包  
+非常有用，类似于python下的`deepTools`和`ngsplot`，R里的`genomation`，此包更系统。  
