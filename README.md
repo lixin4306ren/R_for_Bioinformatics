@@ -6,3 +6,4 @@
 * [获取数据库基因信息，SRA序列数据](biomart.md)
 * [GRanges操作](genomic_ranges.md)
 * [因子操作](factor.md)
+* [矩阵，数据框操作](matrix_dataframe.md)
